@@ -276,7 +276,7 @@ jobs:
           subject-path: ${{ steps.build.outputs.package }}
 
       - name: Upload Package Artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: release-package-${{ needs.validate-tag.outputs.artifact }}-${{ needs.validate-tag.outputs.version }}
           path: ${{ steps.build.outputs.package }}
